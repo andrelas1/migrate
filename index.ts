@@ -1,1 +1,5 @@
-export { renameFiles } from "./src/flow-ts";
+#!/usr/bin/env node
+
+import { renameFiles } from "./src/flow-ts";
+
+renameFiles();

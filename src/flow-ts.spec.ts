@@ -1,5 +1,4 @@
-import process from "process";
-import glob, { sync } from "glob";
+import { sync } from "glob";
 
 import { renameFiles, renameJsToTs } from "./flow-ts";
 
@@ -11,7 +10,7 @@ jest.mock("glob", () => ({
 
 jest.mock("process", () => ({
   esModule: true,
-  argv: ["**/*.js"],
+  argv: ["pattern=**/*.js"],
 }));
 
 describe("flow to ts", () => {
